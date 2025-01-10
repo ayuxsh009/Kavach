@@ -9,11 +9,15 @@ Share real-time live location to ensure fast assistance.
 Submit detailed complaints regarding harassment, abuse, or any safety-related incident.
 Attach evidence (photos) to the complaint.
 Track the status of complaints and receive updates.
-3. Admin Section
+![image](https://github.com/user-attachments/assets/3c350ae1-c42a-4d49-b7ec-ad1b0a306bb7)
+
+4. Admin Section
 Admins can manage users, monitor complaints, and oversee emergency alerts.
 Allows escalations to relevant authorities when necessary.
 Provides analytics and reports for monitoring platform activity.
-4. User Section
+![Screenshot 2025-01-10 221239](https://github.com/user-attachments/assets/bb7447a0-64bc-4888-bace-b4a17bec6350)
+
+5. User Section
 Users can manage profiles, send emergency alerts, and file complaints.
 Simple, intuitive user interface with easy access to key features.
 Notifications to keep users informed about the status of their complaints and alerts.
@@ -23,6 +27,10 @@ Backend: Node.js, Express.js
 Database: MongoDB
 Real-time Location Sharing: Google Maps API, WebSockets
 Hosting: Heroku / AWS / Google Cloud
+![Screenshot 2025-01-10 221146](https://github.com/user-attachments/assets/dc89613d-08e8-46b1-84f3-6bc23e27b9e4)
+![Screenshot 2025-01-10 221205](https://github.com/user-attachments/assets/78b0dafd-1cab-4614-a6f5-5c6998749c8b)
+
+
 Installation
 To set up and run this project locally, follow these steps:
 
