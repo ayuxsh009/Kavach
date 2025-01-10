@@ -72,7 +72,7 @@ bash
 Copy code
 cd frontend
 npm start
-The application should now be running on http://localhost:4000 .
+The application should now be running on http://localhost:3000 .
 
 Contributing
 We welcome contributions to make Kavach more effective and useful. If you have ideas for new features, bug fixes, or improvements, please fork this repository and submit a pull request.
