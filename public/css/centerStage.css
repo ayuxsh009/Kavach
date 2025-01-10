@@ -1,0 +1,253 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center Stage Section */
+.center-stage {
+    height: 100%;
+    width: 60%;
+    margin-top: 5px;
+    background: transparent;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.center-stage:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Area */
+.content-area {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* Title Section */
+.init {
+    margin: 20px;
+    font-size: 50px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    color: #483b20;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.init:hover {
+    color: #ff7043;
+    transform: scale(1.05);
+}
+
+/* Content Card */
+.content {
+    background-color: #36251bd1;
+    margin: 30px 20px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 10px 2px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Link */
+.product-link {
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.product-link:hover {
+    color: #ff7043;
+}
+
+/* Author Info */
+.author {
+    border-bottom: 1px solid gray;
+    display: flex;
+    height: 20%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.author-pic {
+    width: 12%;
+    margin-left: 2%;
+}
+
+.author-img {
+    width: 75%;
+    height: 95%;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.author-img:hover {
+    transform: scale(1.1);
+}
+
+.author-info {
+    width: 85%;
+}
+
+.author-name {
+    font-size: 23px;
+    font-weight: bold;
+    color: #e3d2c0;
+}
+
+.author-contact {
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 0.8px;
+    color: #bdbdbd;
+}
+
+/* Product Section */
+.product {
+    display: flex;
+    border-bottom: 1px solid gray;
+    height: 60%;
+    box-sizing: border-box;
+}
+
+.product-pic {
+    width: 35%;
+    margin: 5px;
+}
+
+.product-pic-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-pic-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-info {
+    width: 65%;
+    overflow: hidden;
+    margin: 16px 0px 2px 14px;
+}
+
+.product-details {
+    width: 100%;
+    font-size: 16px;
+    color: #e3d2c0;
+    letter-spacing: 0.6px;
+    overflow-wrap: break-word;
+}
+
+.detail-headings {
+    font-weight: bold;
+    font-size: 20px;
+    color: #e3d2c0;
+}
+
+/* Others Section */
+.others {
+    position: relative;
+    height: 20%;
+    box-sizing: border-box;
+}
+
+.type {
+    position: absolute;
+    padding: 12px;
+    font-size: 20px;
+    color: #e3d2c0;
+}
+
+.others-right {
+    display: inline;
+    position: absolute;
+    right: 0;
+    margin: 10px 9px;
+}
+
+.others-links {
+    padding: 5px;
+}
+
+.others-links button {
+    font-size: 12px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #ff7043;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.others-links button:hover {
+    background-color: #e64a19;
+    transform: translateY(-3px);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .center-stage {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .content-area {
+        width: 95%;
+    }
+
+    .init {
+        font-size: 35px;
+    }
+
+    .content {
+        margin: 20px 10px;
+    }
+
+    .product {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .product-pic {
+        width: 100%;
+        height: 250px;
+    }
+
+    .product-info {
+        width: 100%;
+    }
+
+    .author-pic {
+        width: 20%;
+    }
+
+    .author-name {
+        font-size: 18px;
+    }
+
+    .others-links button {
+        font-size: 14px;
+        padding: 5px 12px;
+    }
+}

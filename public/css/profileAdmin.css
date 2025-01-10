@@ -1,0 +1,321 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Using a modern font */
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* User Profile Styling */
+.user-profile {
+    background: linear-gradient(135deg, #ff7043 0%, #ffcc80 100%);
+    position: relative;
+    border-radius: 20px;
+    height: 420px;
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+}
+
+.user-profile:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #ff7043 10%, #ffcc80 90%);
+}
+
+.cover-pic {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.display-pic {
+    top: 150px;
+    background-color: white;
+    height: 150px;
+    z-index: 2;
+    position: absolute;
+    border: 5px solid #fff;
+    width: 25%;
+    left: 37.5%;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.display-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.2);
+}
+
+.edit-cover-pic,
+.edit-display-pic {
+    display: none;
+}
+
+.edit-cover-pic-label,
+.edit-display-pic-label {
+    z-index: 2;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-cover-pic-label:hover,
+.edit-display-pic-label:hover {
+    background: rgba(0, 0, 0, 0.85);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.edit-cover-pic-label {
+    top: 170px;
+    right: 5%;
+    font-size: 18px;
+}
+
+.edit-display-pic-label {
+    left: 58%;
+    top: 280px;
+    font-size: 16px;
+}
+
+/* Profile Details Styling */
+.user-details {
+    border-radius: 20px;
+    background-color: white;
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-details:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 34px;
+    color: #ff7043;
+    margin-top: 100px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.name:hover {
+    color: #e64a19;
+    transform: scale(1.05);
+}
+
+.bio {
+    text-align: center;
+    font-size: 20px;
+    color: #757575;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.bio:hover {
+    color: #616161;
+}
+
+.div-group {
+    padding: 15px;
+    font-size: 20px;
+    color: #616161;
+    transition: color 0.3s ease;
+}
+
+.div-group:hover {
+    color: #424242;
+}
+
+/* Edit Profile Button */
+.edit-user-details {
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    width: 35%;
+    font-size: 18px;
+    position: relative;
+    height: 40px;
+    border-radius: 25px;
+    left: 32%;
+    margin-bottom: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-user-details:hover {
+    background-color: #e64a19;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Editor Modal Styling */
+.edito {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 20%;
+    height: 100%;
+    width: 60%;
+    z-index: 11;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.open-editor {
+    display: flex;
+}
+
+.left-stage-editor,
+.right-stage-editor {
+    opacity: 0.8;
+    background-color: #333;
+    position: absolute;
+    width: 33%;
+    color: white;
+    height: 100%;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.left-stage-editor {
+    left: -33%;
+}
+
+.right-stage-editor {
+    right: -33%;
+}
+
+.editi {
+    padding: 25px;
+    background-color: #fafafa;
+    border-radius: 25px;
+    height: 100%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.editi:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
+.user-profile-editor {
+    background-color: white;
+    position: relative;
+    border-radius: 20px;
+    height: 340px;
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background 0.5s ease;
+}
+
+.user-profile-editor:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #ff7043 10%, #ffcc80 90%);
+}
+
+.editor-btns {
+    background-color: #ff7043;
+    color: white;
+    width: 20%;
+    height: 45px;
+    border-radius: 12px;
+    margin: 12px 5px;
+    position: relative;
+    left: 60%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.editor-btns:hover {
+    background-color: #e64a19;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Inputs */
+.form-group {
+    padding: 15px;
+    font-size: 18px;
+    color: #424242;
+}
+
+.inputText {
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.inputText:focus {
+    border-color: #ff7043;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transform: scale(1.02);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .user-profile,
+    .user-details,
+    .user-profile-editor {
+        width: 95%;
+    }
+
+    .display-pic {
+        left: 35%;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .edit-user-details {
+        width: 50%;
+        font-size: 14px;
+    }
+
+    .editor-btns {
+        width: 25%;
+    }
+
+    .bio {
+        font-size: 18px;
+    }
+
+    .div-group {
+        font-size: 16px;
+    }
+}
