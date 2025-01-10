@@ -25,7 +25,7 @@ const port = process.env.PORT || 4000;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 app.use(express.static(path.join(__dirname, '/public')));
-const uri = `mongodb+srv://ayushraj:ayush@cluster0.f7eko.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+const uri = `mongodb+srv://[username]:[password]@cluster0.f7eko.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0` //use your user id and password for database connectivity
 
 // mongoose connection
 mongoose
@@ -385,7 +385,7 @@ app.post('/sendMail', async (req, res) => {
                 service : 'gmail',
                 auth:{
                     user :'kavachwomensafety@gmail.com',
-                    pass:'dsju xazf essa yfzq'
+                    pass:'####################'// get your password from Google App Code
                 }
             });
             var reciever ="";
