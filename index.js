@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
-
+const dotenv = require("dotenv");
+dotenv.config()
 // file system ( sync or async)
 const fs = require('fs');
 const app = express();
@@ -25,8 +26,7 @@ const port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 app.use(express.static(path.join(__dirname, '/public')));
-const uri = `mongodb+srv://ayushraj:ayush@cluster0.f7eko.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0` //use your user id and password for database connectivity
-
+const uri = process.env.MONGO_URI
 // mongoose connection
 mongoose
   .connect(uri, {
@@ -384,8 +384,8 @@ app.post('/sendMail', async (req, res) => {
             let testAccount =  nodemailer.createTransport({
                 service : 'gmail',
                 auth:{
-                    user :'kavachwomensafety@gmail.com',
-                    pass:'####################'// get your password from Google App Code
+                    user: process.env.GOOGLE_EMAIL,
+                    pass: process.env.GOOGLE_PASS
                 }
             });
             var reciever ="";
