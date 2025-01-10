@@ -21,11 +21,11 @@ const busboy = require('connect-busboy');
 const nodemailer = require('nodemailer');
 const users = require('./models/users');
 const complaints = require('./models/complaints');
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 app.use(express.static(path.join(__dirname, '/public')));
-const uri = `mongodb+srv://[username]:[password]@cluster0.f7eko.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0` //use your user id and password for database connectivity
+const uri = `mongodb+srv://ayushraj:ayush@cluster0.f7eko.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0` //use your user id and password for database connectivity
 
 // mongoose connection
 mongoose
@@ -502,3 +502,5 @@ app.get('/logout', (req, res) => {
 app.listen(port, () => {
     console.log(`listening on port ${port}`);
 });
+
+module.exports = app
